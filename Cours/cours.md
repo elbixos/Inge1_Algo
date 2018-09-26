@@ -2,15 +2,21 @@
 # Le cours d'algorithmique
 # Formation d'ingénieur de l'université des Antilles
 # Auteur : Vincent Pagé : <vincent.page@univ-antilles.fr>
-
-
 ## Introduction
 
-Dans ce cours, nous verrons les rudiments de l'algorithmique pour vos formations (Matériaux et Systèmes énergétiques). Mon objectif est simple : ne pas focaliser sur les détails, mais vous permettre de faire des choses rapidement. Ce document est extrêment synthétique. Il ne vous dispense pas d'aller en cours ni d'essayer de programmer vous même. Pour plus de détails, vous pouvez me poser des questions et/ou chercher un peu sur le net ou dans des cours plus détaillés.
+Dans ce cours, nous verrons les rudiments de l'algorithmique pour vos formations (Matériaux et Systèmes énergétiques). Mon objectif est simple : ne pas focaliser sur les détails, mais vous permettre de faire des choses rapidement. Ce document est extrêment synthétique. Il ne vous dispense pas d'aller en cours ni d'essayer de programmer vous même.
 
-Les concepts présentés s'appliquent à presque tous les langages que je connais. Lorsque je devrais faire un vrai programme pour vous présenter quelque chose, je le ferais en python. Installez donc python sur votre machine. Les exemples seront fait pour fonctionner en python 3.
+Pour plus de détails, vous pouvez me poser des questions et/ou chercher un peu sur le net ou dans des cours plus détaillés. Si vous ne voulez pas chercher, vous trouverez quelques liens vers ce type de ressources [ici](98_liens.md)
 
-Le dépot dans lequel vous avez trouvé ce document contient les exemples que nous avons vu en cours.
+Les concepts présentés dans ce cours s'appliquent à la plupart les langages que je connais. Lorsque je devrais faire un vrai programme pour vous présenter quelque chose, je le ferais en **python**.
+
+Installez donc python sur votre machine. Les exemples seront fait pour fonctionner en python 3. Je suis sûr qu'avec l'aide d'internet, vous devriez être en mesure d'installer python 2 sur votre machine...
+
+Le dépot dans lequel vous avez trouvé ce document contient également les exemples que nous avons vu en cours.
+
+___
+Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
+___
 
 # Le cours d'algorithmique
 # Formation d'ingénieur de l'université des Antilles
@@ -57,6 +63,10 @@ TO DO
 Le code que j'ai présenté juste avant est le programme principal. C'est ce que fait mon programme.
 
 Un vrai bon programme découpe le code en petites actions que le programme principal organise. Si je veux programmer
+
+___
+Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
+___
 ## Cours 2 : Tableaux
 
 ### intérêt
@@ -391,16 +401,49 @@ iMajor = imaximum(notes)
 print ("major :", noms[iMajor])
 ```
 ### les fichiers
-Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](Sources/).
+Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](../Sources/).
 On y trouvera en particulier :
-- [L'intro sur les tableaux](Sources/02_tableaux.py)
-- [Les parcours de tableaux](Sources/02_parcoursTableaux.py)
-- [Les exemples de calcul](Sources/02_calculsTableaux.py)
-- [La version finale](Sources/02_finalTableaux.py)
+- [L'intro sur les tableaux](../Sources/02_tableaux.py)
+- [Les parcours de tableaux](../Sources/02_parcoursTableaux.py)
+- [Les exemples de calcul](../Sources/02_calculsTableaux.py)
+- [La version finale](../Sources/02_finalTableaux.py)
+
+
+___
+Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
+___
+## Quelques liens externes
+
+Le problème quand on enseigne l'informatique (ou quoi que ce soit d'autre), est d'adapter son discours a son public. Ce que je propose dans ce cours est un kit de survie pour l'algorithmique et la programmation utile pour tout ingénieur.
+
+J'y fais d'énormes raccourcis.
+Si vous souhaitez aller un peu plus loin voici quelques liens que j'ai glané sur internet.
+
+### Un tutoriel pour se former :
+
+Si vous souhaitez des informations plus détaillées, d'autres exemples, des exercices à faire, voici
+ [un tutoriel](https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python)
+ Je vous conseille de faire tout le début, vous pourrez vous arrêter quand vous voudrez.
+
+### Le tutoriel officiel :
+Vous voulez quelque chose de plus rigoureux, toujours sous forme de tutoriel ? Voici [un autre tutoriel](https://docs.python.org/fr/3/tutorial/index.html)
+Il est bien aussi, mais il suppose souvent que vous travaillez sous Linux et/ou que vous ayez quelques bases en informatique...
+
+### Un cours :
+Vous souhaitez un gros pdf avec tout ce qu'on peut vouloir savoir sur python ? Voici [un gros cours](https://inforef.be/swi/download/apprendre_python3_5.pdf)
+J'aurais tendance à louer son côté très complet, tout en lui reprochant de ne pas être ...synthétique...  
+
+### Autres ressources
+Si vous trouvez d'autres ressources utiles, n'hésitez pas à m'en faire part, je pourrais les ajouter...
+
+___
+Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
+___
 ## Sommaire
 - [Introduction](00_intro.md)
 - [Cours 1](01_cours1.md)
 - [Cours 2](02_cours2.md)
+- [Liens utiles](98_liens.md)
 
 ## Etat du cours :
 Pour le moment :
