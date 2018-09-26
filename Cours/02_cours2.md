@@ -188,3 +188,156 @@ Mais ceci ne fonctionne que pour des tableaux de 4 cases. Il suffit d'intégrer 
 for i in range(len(notes)) :
   print (notes[i])
 ```
+#### Quelques exemples
+Si vous avez compris ces parcours, au lieu d'afficher simplement le contenu de chaque case, nous allons pouvoir faire des choses plus complexes.
+
+##### Somme des éléments d'un tableaux
+Pour faire la somme des éléments d'un tableau, il me suffit d'avoir une variable *somme* qui vaudra 0 au départ, et que je vais augmenter au cours de mon parcours de la valeur de chaque case visitée.
+
+N'importe quelle parcours parmi les 3 précédents fonctionne, je vais prendre le plus simple.
+```python
+notes = [12, 9.5, 14, 2]
+
+somme = 0
+for n in notes :
+    somme = somme + n
+
+print ("somme :", somme)
+```
+A moindre frais, je peux aussi calculer la moyenne en ajoutant la ligne qui suit :
+```python
+print ("moyenne :", somme/len(notes))
+```
+
+##### recherche du maximum d'un tableaux
+Si je cherche le maximum de mon tableau, il suffit que je dispose d'une variable *maxi* qui vaut, disons 0. Je parcours mon tableau et chaque fois que je vois quelque chose de plus grand que ce que j'ai déja vu, mon *maxi* est mis à jour.
+
+Quelque chose comme ceci.
+```python
+notes = [12, 9.5, 14, 2]
+
+maxi = 0
+for n in notes :
+    if n > maxi:
+      maxi =  n
+
+print ("somme :", somme)
+```
+Avec un peu d'expérience, je peux me méfier de la ligne qui dit *maxi = 0*. En effet si mon tableau ne contient que des éléments négatifs, aucune case ne va déclencher mon *if*. Par conséquent, a la fin de la boucle, le maximum de mon tableau sera resté à zéro, alors que tous les éléments sont négatifs...
+De fait, il vaut mieux initialiser mon maxi à la valeur de la premiere case du tableau, comme suit :
+
+maxi = notes[0]
+for n in notes :
+    if n > maxi:
+      maxi =  n
+
+print ("maxi :", maxi)
+
+##### parcours de 2 tableaux conjoints
+Bon. Imaginons que je veuille maintenant gérer aussi les noms de mes étudiants.
+Je pourrais stocker le nom des étudiants dans un tableau de chaînes de caractères.
+```python
+noms = ["moutoussamy","destouches","julan","najeus"]
+```
+L'idée est que l'étudiant dont le nom est dans la case numéro 2 du tableau *nom* a eu la note contenue dans la case numéro 2 du tableau *notes*
+
+Si je souhaite afficher les noms et les notes de ma promotion : je vais me déplacer de case en case en utilisant un indice variant de 0 à 3. Pour chaque indice, j'affiche la case correspondante dans le tableau des noms et la case correspondante dans le tableau de notes.
+
+```python
+noms = ["moutoussamy","destouches","julan","najeus"]
+for i in range(len(notes)):
+    print(noms[i], notes[i])
+```
+Cela commence a ressembler a quelque chose !
+Voyons si l'on peut compliquer un tout petit peu.
+
+##### affichage du nom du major
+Pour afficher le nom du major de promo, c'est relativement simple : je vais chercher le numéro de la case contenant le maximum du tableau de notes.
+Je peux alors afficher le nom situé dans la case correspondante dans le tableau de noms.
+
+Pour trouver la position du maximum : on veut retenir la valeur du maximum, mais aussi sa position. On aura donc ces variables à mémoriser.
+
+Lors du parcours du tableau, chaque fois que je mets a jour mon maximum, je met également à jour sa position.
+
+```python
+maxi = notes[0]
+imaxi = 0
+
+for i in range(len(notes)):
+    if notes[i]> maxi:
+        maxi = notes[i]
+        imaxi = i
+
+print ("major", noms[imaxi])
+```
+
+##### Nettoyage et mise en fonctions.
+Pour avoir du code propre il est toujours recommandé de coder en utilisant des fonctions.
+
+Chacune des petites actions que j'ai faites va donc être déplacée dans une fonction spécifique. A dire vrai, j'aurais tendance à le faire au fur et à mesure. Ici, et c'est la dernière fois de l'année, je le fais à la fin du chapitre pour ne pas tout mélanger.
+
+En se souvenant de ce qui a été fait dans le cours précédent sur les fonctions, vous devriez pouvoir comprendre ce qui suit, qui reprend la totalité de nos travaux, mais proprement.
+
+```python
+def afficher(tab):
+    for e in tab :
+        print(e)
+
+def afficherPromo(noms, notes):
+    for i in range(len(noms)) :
+        print(noms[i], notes[i])
+
+def calculerSomme(tab):
+    somme = 0
+    for e in tab :
+        somme = somme + e
+
+    return somme
+
+def maximum(tab):
+    maxi = tab[0]
+    for e in tab :
+        if e > maxi:
+            maxi = e
+
+    return maxi
+
+def imaximum(tab):
+    maxi = tab[0]
+    imaxi = 0
+
+    for i in range(len(tab)) :
+        if tab[i] > maxi:
+            maxi = tab[i]
+            imaxi = i
+
+    return imaxi
+
+notes = [12, 9.5, 14, 2]
+noms = ["moutoussamy","destouches","julan","najeus"]
+
+afficher(noms)
+afficher(notes)
+
+afficherPromo(noms, notes)
+
+somme = calculerSomme (notes)
+print ("somme :", somme)
+
+moyenne = somme / len(notes)
+print ("moyenne :", moyenne)
+
+maxi = maximum(notes)
+print ("maxi :", maxi)
+
+iMajor = imaximum(notes)
+
+print ("major :", noms[iMajor])
+```
+### les fichiers
+Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](Sources/).
+On y trouvera en particulier :
+- [L'intro sur les tableaux](Sources/02_tableaux.py)
+- [Les parcours de tableaux](Sources/02_parcoursTableaux.py)
+- [Les exemples de calcul](Sources/02_calculsTableaux.py)
+- [La version finale](Sources/02_finalTableaux.py)
