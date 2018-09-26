@@ -42,13 +42,38 @@ Voici ce que je voudrais : une seule variable contenant ces informations, rangé
 |14|
 |2|
 
-Ici, *notes* est le noms de mon tableau.
+Ici, *notes* est le nom de mon tableau.
+L'intérêt est simple : si j'ajoute un étudiant, j'ajoute juste une case a mon tableau. **Mes notes ne sont contenues que dans une seule variable** : *notes*
 
+Je peux créer un tableau de ce type comme ceci
+```python
+notes = [12, 9.5, 14, 2]
+print(notes)
+```
+Pour accéder à une case, je vais utiliser son numéro (on parle d'*indice* de la case). Les indices commencent à 0. Une bonne représentation de mon tableau serait la suivante :
 
+indice | valeur
+---|---
+0|12
+1|9.5
+2|14
+3|2
 
+Si je veux accéder à la case numéro 2, j'utiliserais l'écriture suivante : notes[2]
+
+Le code suivant :
+- affiche la valeur de la case 2 (qui vaut 14)
+- puis modifie la valeur de la case 3 pour y mettre la valeur 11
+- afficher tout le tableau
+
+```python
+print (notes [2])
+notes[3] = 11
+print(notes)
+```
 
 #### Manipulations de base sur les tableaux
 
-Creation d'un tableau
+Pour créer un tableau, on peut le créer déja rempli, comme nous l'avons fait
 
 parcours d'un tableau avec des boucles.
