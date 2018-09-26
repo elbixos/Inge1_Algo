@@ -1,6 +1,7 @@
+
 # Le cours d'algorithmique
 # Formation d'ingénieur de l'université des Antilles
-# Auteur : Vincent Pagé : vincent.page@univ-antilles.fr
+# Auteur : Vincent Pagé : <vincent.page@univ-antilles.fr>
 
 ## Introduction
 
@@ -34,7 +35,8 @@ Comprenons une chose tout d'abord : un programme informatique ne fait qu'une cho
 - les chaînes de caractères (string)
 
 Dans les variables, je stocke des valeurs.
-```
+
+```python
   a=5
   b=7
   print(a+b)
