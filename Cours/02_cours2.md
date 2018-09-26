@@ -337,4 +337,4 @@ On y trouvera en particulier :
 - [L'intro sur les tableaux](../Sources/02_tableaux.py)
 - [Les parcours de tableaux](../Sources/02_parcoursTableaux.py)
 - [Les exemples de calcul](../Sources/02_calculsTableaux.py)
-- [La version finale](Sources/02_finalTableaux.py)
+- [La version finale](../Sources/02_finalTableaux.py)
