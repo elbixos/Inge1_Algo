@@ -338,3 +338,8 @@ On y trouvera en particulier :
 - [Les parcours de tableaux](../Sources/02_parcoursTableaux.py)
 - [Les exemples de calcul](../Sources/02_calculsTableaux.py)
 - [La version finale](../Sources/02_finalTableaux.py)
+
+
+___
+Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
+___
