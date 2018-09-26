@@ -332,9 +332,9 @@ iMajor = imaximum(notes)
 print ("major :", noms[iMajor])
 ```
 ### les fichiers
-Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](Sources/).
+Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](../Sources/).
 On y trouvera en particulier :
-- [L'intro sur les tableaux](Sources/02_tableaux.py)
-- [Les parcours de tableaux](Sources/02_parcoursTableaux.py)
-- [Les exemples de calcul](Sources/02_calculsTableaux.py)
+- [L'intro sur les tableaux](../Sources/02_tableaux.py)
+- [Les parcours de tableaux](../Sources/02_parcoursTableaux.py)
+- [Les exemples de calcul](../Sources/02_calculsTableaux.py)
 - [La version finale](Sources/02_finalTableaux.py)
