@@ -88,7 +88,7 @@ print (noms)
 noms.append("julan")
 print (noms)
 
-noms.append("najeus")
+noms.append("naejus")
 print (noms)
 ```
 #### longueur d'un tableau
@@ -234,14 +234,14 @@ print ("maxi :", maxi)
 Bon. Imaginons que je veuille maintenant gérer aussi les noms de mes étudiants.
 Je pourrais stocker le nom des étudiants dans un tableau de chaînes de caractères.
 ```python
-noms = ["moutoussamy","destouches","julan","najeus"]
+noms = ["moutoussamy","destouches","julan","naejus"]
 ```
 L'idée est que l'étudiant dont le nom est dans la case numéro 2 du tableau *nom* a eu la note contenue dans la case numéro 2 du tableau *notes*
 
 Si je souhaite afficher les noms et les notes de ma promotion : je vais me déplacer de case en case en utilisant un indice variant de 0 à 3. Pour chaque indice, j'affiche la case correspondante dans le tableau des noms et la case correspondante dans le tableau de notes.
 
 ```python
-noms = ["moutoussamy","destouches","julan","najeus"]
+noms = ["moutoussamy","destouches","julan","naejus"]
 for i in range(len(notes)):
     print(noms[i], notes[i])
 ```
@@ -311,7 +311,7 @@ def imaximum(tab):
     return imaxi
 
 notes = [12, 9.5, 14, 2]
-noms = ["moutoussamy","destouches","julan","najeus"]
+noms = ["moutoussamy","destouches","julan","naejus"]
 
 afficher(noms)
 afficher(notes)
