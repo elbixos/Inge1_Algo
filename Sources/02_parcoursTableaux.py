@@ -1,4 +1,5 @@
 notes = [12, 9.5, 14, 2]
+
 print ("===============")
 print ("boucle while")
 print ("===============")
