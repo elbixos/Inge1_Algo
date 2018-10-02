@@ -1,6 +1,6 @@
 cd Sources
 source ./_makeindex
 cd ../Cours
-source ./generateAllFormats.sh
 source ./_makeindex
+source ./generateAllFormats.sh
 cd ..
