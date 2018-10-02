@@ -44,4 +44,15 @@ Ici, à chaque tour de boucle, *a*, qui avait commencé à 0, est augmenté de 1
 Nous verrons plus tard (ou vous chercherez) un autre célèbre type de boucle, la boucle **for** qui marche bien aussi, mais je n'en n'ai pas besoin pour le moment.
 
 #### Exercices
-TODO
+Vous **devez** être en mesure de faire les exercices suivants :
+1. faites un programme qui affiche les nombres entiers de 0 a 33
+
+2. faites un programme qui affiche les nombres de 3 a 33
+
+3. faites un programme qui calcule la somme des nombres de 0 à 33
+
+4. faites un programme qui calcule la somme des inverses des nombres de 0 à 33
+
+5. faites un programme qui calcule le produit des nombres de 1 à 33
+
+4. faites un programme qui calcule le produit du carré des nombres de 1 à 33
