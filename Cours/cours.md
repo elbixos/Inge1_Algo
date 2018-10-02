@@ -2,27 +2,10 @@
 # Le cours d'algorithmique
 # Formation d'ingénieur de l'université des Antilles
 # Auteur : Vincent Pagé : <vincent.page@univ-antilles.fr>
-## Introduction
-
-Dans ce cours, nous verrons les rudiments de l'algorithmique pour vos formations (Matériaux et Systèmes énergétiques). Mon objectif est simple : ne pas focaliser sur les détails, mais vous permettre de faire des choses rapidement. Ce document est extrêment synthétique. Il ne vous dispense pas d'aller en cours ni d'essayer de programmer vous même.
-
-Pour plus de détails, vous pouvez me poser des questions et/ou chercher un peu sur le net ou dans des cours plus détaillés. Si vous ne voulez pas chercher, vous trouverez quelques liens vers ce type de ressources [ici](98_liens.md)
-
-Les concepts présentés dans ce cours s'appliquent à la plupart les langages que je connais. Lorsque je devrais faire un vrai programme pour vous présenter quelque chose, je le ferais en **python**.
-
-Installez donc python sur votre machine. Les exemples seront fait pour fonctionner en python 3. Je suis sûr qu'avec l'aide d'internet, vous devriez être en mesure d'installer python 2 sur votre machine...
-
-Le dépot dans lequel vous avez trouvé ce document contient également les exemples que nous avons vu en cours.
-
-___
-Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
-___
 
 # Le cours d'algorithmique
 # Formation d'ingénieur de l'université des Antilles
 # Auteur : Vincent Pagé : <vincent.page@univ-antilles.fr>
-## Cours 1
-
 ### Concepts d'algorithmique d'aujourd'hui.
 Ceci est ma vision de la programmation actuelle. Tout le monde ne s'y retrouvera peut être pas, mais il me semble que la plupart des développeurs en entreprise seront d'accord avec le constat suivant :
 Programmer (ou coder) fait appel à deux grands capacités :
@@ -91,7 +74,6 @@ La **stratégie**, est utile pour programmer mais aussi pour la coordination de 
 Ce cours a pour objectif de vous apprendre un peu de **tactique** (les variables, les boucles, les fonctions...) et beaucoup de **stratégie**.
 
 Voyons donc le minimum de tactique à savoir pour commencer
-
 ### Les variables
 Comprenons une chose tout d'abord : un programme informatique ne fait qu'une chose : il manipule des variables. Toutes les informations que doit gérer votre programme doivent donc se retrouver dans des variables. Vous en connaissez vraisemblablement quelques types simples de variables :
 - les entiers (int)
@@ -108,7 +90,6 @@ Dans les variables, je stocke des valeurs.
 ```
 j'ai créé une variable *a*, lui ai donné la valeur 5, puis crée une variable *b*, lui ai donné la valeur 7,
 puis affiché le résultat de la somme des valeurs des deux variables.
-
 ### Les tests conditionnel (*if*)
 Une grande partie de l'algorithmique consiste a dire ce que l'on fait dans tel ou tel cas. Au coeur de tout ceci se trouve le test conditionnel.
 Ici, on fait un programme qui compare la valeur de *a* avec celle de *b*. Si *a* est plus petit, on écrit qu'il est plus petit, sinon, on écrit qu'il est plus grand. Enfin, notre programme continuera à écrire des inepties. Voici la syntaxe en python :
@@ -133,6 +114,8 @@ Eventuellement, il pourrait être intéressant d'avoir 3 cas :
 
 La solution consisterait à imbriquer des *if* ou a utiliser *elif* (cherchez sur le net, on le verra en cours mais je ne vais pas surcharger ce support)
 
+#### Exercices
+TODO
 ### Les boucles *Tant que* (while)
 Imaginons que je veuille écrire "bonjour à tous" 10 fois. Nous pouvons le faire en répétant 10 fois la ligne suivante :
 ```python
@@ -178,6 +161,8 @@ Ici, à chaque tour de boucle, *a*, qui avait commencé à 0, est augmenté de 1
 
 Nous verrons plus tard (ou vous chercherez) un autre célèbre type de boucle, la boucle **for** qui marche bien aussi, mais je n'en n'ai pas besoin pour le moment.
 
+#### Exercices
+TODO
 ### Les fonctions.
 Le code que j'ai présenté juste avant est le programme principal. C'est ce que fait mon programme.
 
@@ -185,14 +170,8 @@ Un vrai bon programme découpe le code en petites actions que le programme princ
 
 TODO
 
-### Les fichiers de ce Cours
-Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](../Sources/).
-On y trouvera en particulier :
-- [Les variables, tests, boucles](../Sources/01_intro.py)
-
-___
-Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
-___
+#### Exercices
+TODO
 ## Cours 2 : Tableaux
 
 ### intérêt
@@ -533,11 +512,6 @@ On y trouvera en particulier :
 - [Les parcours de tableaux](../Sources/02_parcoursTableaux.py)
 - [Les exemples de calcul](../Sources/02_calculsTableaux.py)
 - [La version finale](../Sources/02_finalTableaux.py)
-
-
-___
-Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
-___
 ### Cours 3 : Réalisation d'un vrai projet
 
 #### Projet : Présentation et Méthodologie
@@ -766,11 +740,6 @@ il faudra sans doute modifier la fonction *afficherLigne* et peut être lui pass
 Vous **pourriez** :
 - Essayer de modifier le programme pour que les joueurs manipulent des numéros de ligne allant de 1 à 4 (et pas de 0 à 3). Notre programme, lui, continuera à stocker le nombre d'allumettes dans un tableau indexé de 0 à 3.
 - Essayer de mettre en place la vérification du numéro de ligne et du nombre d'allumettes choisi par le joueur. Si ses choix sont non valides, on lui redemande...
-
-
-___
-Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
-___
 ## Quelques liens externes
 
 Le problème quand on enseigne l'informatique (ou quoi que ce soit d'autre), est d'adapter son discours a son public. Ce que je propose dans ce cours est un kit de survie pour l'algorithmique et la programmation utile pour tout ingénieur.
@@ -798,19 +767,3 @@ Si vous trouvez d'autres ressources utiles, n'hésitez pas à m'en faire part, j
 ___
 Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
 ___
-## Sommaire
-- [Introduction](00_intro.md)
-- [Cours 1](01_cours1.md)
-- [Cours 2](02_cours2.md)
-- [Cours 3](03_cours3.md)
-- [Liens utiles](98_liens.md)
-
-## Etat du cours :
-Pour le moment :
-- le cours 1 n'est pas finalisé
-- le cours 2 est propre
-
-## Cours Complet
-Il existe aussi une version complète du cours qui réunit tous les cours
-- [format md](cours.md)
-- [format pdf](cours.pdf)

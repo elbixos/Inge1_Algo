@@ -1,3 +1,5 @@
+## Cours 1
+
 ### Concepts d'algorithmique d'aujourd'hui.
 Ceci est ma vision de la programmation actuelle. Tout le monde ne s'y retrouvera peut être pas, mais il me semble que la plupart des développeurs en entreprise seront d'accord avec le constat suivant :
 Programmer (ou coder) fait appel à deux grands capacités :
@@ -66,6 +68,7 @@ La **stratégie**, est utile pour programmer mais aussi pour la coordination de 
 Ce cours a pour objectif de vous apprendre un peu de **tactique** (les variables, les boucles, les fonctions...) et beaucoup de **stratégie**.
 
 Voyons donc le minimum de tactique à savoir pour commencer
+
 ### Les variables
 Comprenons une chose tout d'abord : un programme informatique ne fait qu'une chose : il manipule des variables. Toutes les informations que doit gérer votre programme doivent donc se retrouver dans des variables. Vous en connaissez vraisemblablement quelques types simples de variables :
 - les entiers (int)
@@ -82,6 +85,7 @@ Dans les variables, je stocke des valeurs.
 ```
 j'ai créé une variable *a*, lui ai donné la valeur 5, puis crée une variable *b*, lui ai donné la valeur 7,
 puis affiché le résultat de la somme des valeurs des deux variables.
+
 ### Les tests conditionnel (*if*)
 Une grande partie de l'algorithmique consiste a dire ce que l'on fait dans tel ou tel cas. Au coeur de tout ceci se trouve le test conditionnel.
 Ici, on fait un programme qui compare la valeur de *a* avec celle de *b*. Si *a* est plus petit, on écrit qu'il est plus petit, sinon, on écrit qu'il est plus grand. Enfin, notre programme continuera à écrire des inepties. Voici la syntaxe en python :
@@ -106,8 +110,6 @@ Eventuellement, il pourrait être intéressant d'avoir 3 cas :
 
 La solution consisterait à imbriquer des *if* ou a utiliser *elif* (cherchez sur le net, on le verra en cours mais je ne vais pas surcharger ce support)
 
-#### Exercices
-TODO
 ### Les boucles *Tant que* (while)
 Imaginons que je veuille écrire "bonjour à tous" 10 fois. Nous pouvons le faire en répétant 10 fois la ligne suivante :
 ```python
@@ -153,8 +155,6 @@ Ici, à chaque tour de boucle, *a*, qui avait commencé à 0, est augmenté de 1
 
 Nous verrons plus tard (ou vous chercherez) un autre célèbre type de boucle, la boucle **for** qui marche bien aussi, mais je n'en n'ai pas besoin pour le moment.
 
-#### Exercices
-TODO
 ### Les fonctions.
 Le code que j'ai présenté juste avant est le programme principal. C'est ce que fait mon programme.
 
@@ -162,8 +162,11 @@ Un vrai bon programme découpe le code en petites actions que le programme princ
 
 TODO
 
-#### Exercices
-TODO
+### Les fichiers de ce Cours
+Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](../Sources/).
+On y trouvera en particulier :
+- [Les variables, tests, boucles](../Sources/01_intro.py)
+
 ___
 Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
 ___
