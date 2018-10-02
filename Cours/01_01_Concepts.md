@@ -34,7 +34,6 @@ lorsqu'on me donne un fichier image à reconnaitre, je vais :
   3.1 Je mesure la distance de mon image *inconnue* a l'image connue -> dist
 
   3.2 Je retiens l'image connue ayant la plus distance *dist* -> *imageLaPlusProche*
-
 4. J'annonce avoir reconnu l'étudiant dont le nom corresspond à *imageLaPlusProche*
 ----------
 
