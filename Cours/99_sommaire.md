@@ -7,8 +7,9 @@
 
 ## Etat du cours :
 Pour le moment :
-- le cours 1 n'est pas finalisé
+- le cours 1 est propre
 - le cours 2 est propre
+- le cours 3 est propre
 
 ## Cours Complet
 Il existe aussi une version complète du cours qui réunit tous les cours
