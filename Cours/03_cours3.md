@@ -226,6 +226,6 @@ il faudra sans doute modifier la fonction *afficherLigne* et peut être lui pass
 Vous **pourriez** :
 - Essayer de modifier le programme pour que les joueurs manipulent des numéros de ligne allant de 1 à 4 (et pas de 0 à 3). Notre programme, lui, continuera à stocker le nombre d'allumettes dans un tableau indexé de 0 à 3.
 - Essayer de mettre en place la vérification du numéro de ligne et du nombre d'allumettes choisi par le joueur. Si ses choix sont non valides, on lui redemande...
-___
-Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
+
+[Sommaire](99_sommaire.md)
 ___
