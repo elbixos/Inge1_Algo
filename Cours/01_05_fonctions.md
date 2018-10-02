@@ -1,3 +1,5 @@
+
+
 ### Les fonctions.
 Le code que j'ai présenté juste avant est le **programme principal**. C'est ce que fait mon programme.
 
