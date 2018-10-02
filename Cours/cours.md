@@ -29,11 +29,66 @@ Programmer (ou coder) fait appel à deux grands capacités :
 - la stratégie
 - la tactique
 
-Explications : TODO
+#### La stratégie
+C'est, dans le domaine militaire, ce qui vous fait gagner une guerre (*si vous le faites bien et que vous avez de la chance*). C'est la planification vue de loin.
 
-un cours focalise souvent sur la tactique, alors que les langages actuels permettent d'en faire abstraction assez fréquemmment. Par exemple, si je dois trier un tableau par ordre croissant, nous avons, dans tous les langages évolués, des fonctions pour le faire.
+Les généraux, autour d'une table, décident d'envoyer tel bataillon à gauche, pendant que tel autre bataillon partira à droite pour prendre en sandwich l'armée adverse. Ils peuvent aussi planifier de faire un siège pour affamer l'armée ennemie, et quand ils auront faim, ils attaqueront.
 
-La stratégie, elle est utile pour programmer mais aussi pour la coordonnation de n'importe quel projet que vous aurez à réaliser.
+#### La tactique
+C'est, dans le domaine militaire, ce qui vous fait gagner une bataille (*si vous le faites bien et que vous avez de la chance*). C'est la planification vue de très près.
+
+Le sergent, au coeur du champ de bataille, décide d'envoyer 2 hommes a gauche de la petite colline, pendant que ...
+
+Les sergents font souvent de mauvais généraux, les généraux font souvent de mauvais sergents.
+
+#### Quel rapport avec l'algorithmique et la programmation ?
+Prenons un exemple plus ou moins simple : Vous souhaitez faire un programme qui reconnaisse le visage des différents étudiants de la promotion.
+
+Plus précisément, nous devons faire un programme auquel on donne une image, et il doit retrouver le nom de l'étudiant correspondant.
+
+Je vais supposer que nous disposons d'images des visage chaque étudiant de la promotion, associé à son nom.
+
+La partie **Stratégie** c'est la définition des grandes étapes de mon programme. Pour l'exemple, on pourrait penser à quelque chose comme ceci :
+lorsqu'on me donne un fichier image à reconnaitre, je vais :
+
+---------
+1. lire l'image du fichier -> une image *inconnue*
+2. lire l'ensemble de mes images connues -> *maBase*
+3. pour chaque image de *maBase* :
+
+  3.1 Je mesure la distance de mon image *inconnue* a l'image connue -> dist
+
+  3.2 Je retiens l'image connue ayant la plus distance *dist* -> *imageLaPlusProche*
+
+4. J'annonce avoir reconnu l'étudiant dont le nom corresspond à *imageLaPlusProche*
+----------
+
+Vous ne savez pas lire une image ? Ce n'est pas très grave (internet ou votre sergent le sait)
+
+Vous ne savez pas définir une distance entre deux images ?  Raffinez votre stratégie. Par exemple, une solution classique (assez peu efficace, il faut reconnaître) consiste à calculer la somme des carrés des différences pixel à pixel entre les 2 images.
+
+Tout ce travail n'est pas forcément fait par un informaticien.
+
+La partie **tactique** c'est, pour une partie précise de mon programme, la réalisation d'un algorithme dans un langage donné.
+
+Pour l'exemple, Si je dois faire cette somme des carrés ... je pourrais faire quelque chose comme ceci :
+
+```python
+  distance = 0;
+  for x in range(len(image1.width) :
+    for y in range()(image1.height)) :
+      dist += (image1[x][y] - image2[x][y]) **2
+```
+
+Vous ne comprenez pas ce code ? c'est normal. Vous devriez en comprendre l'essentiel d'ici quelques cours.
+
+La **tactique**, c'est de la programmation les mains dans le cambouis (*ou dans la boue si on conserve l'image du sergent*)
+
+Les cours d'algorithmique focalisent souvent sur la tactique, alors que les langages actuels permettent d'en faire abstraction assez fréquemment. Par exemple, si je dois trier un tableau par ordre croissant, nous avons, dans tous les langages évolués, des fonctions pour le faire sans faire la moindre boucle.
+
+La **stratégie**, est utile pour programmer mais aussi pour la coordination de n'importe quel projet que vous aurez à réaliser : vous aller choisir d'enchainer des actions, certaines requérant des résultats obtenus par des actions précédentes...
+
+Ce cours a pour objectif de vous apprendre un peu de **tactique** (les variables, les boucles, les fonctions...) et beaucoup de **stratégie**.
 
 Voyons donc le minimum de tactique à savoir pour commencer
 
@@ -54,15 +109,86 @@ Dans les variables, je stocke des valeurs.
 j'ai créé une variable *a*, lui ai donné la valeur 5, puis crée une variable *b*, lui ai donné la valeur 7,
 puis affiché le résultat de la somme des valeurs des deux variables.
 
-### Les tests (if)
-TO DO
+### Les tests conditionnel (*if*)
+Une grande partie de l'algorithmique consiste a dire ce que l'on fait dans tel ou tel cas. Au coeur de tout ceci se trouve le test conditionnel.
+Ici, on fait un programme qui compare la valeur de *a* avec celle de *b*. Si *a* est plus petit, on écrit qu'il est plus petit, sinon, on écrit qu'il est plus grand. Enfin, notre programme continuera à écrire des inepties. Voici la syntaxe en python :
 
-### Les boucles Tant que (while)
+```python
+if a < b :
+    print ("a est plus petit")
+    print ("mais il est vaillant")
+else :
+    print ("a est plus grand ou égal")
+
+print ("la taille importe peu")
+```
+Notez le décalage horizontal qui signale ce qui est dans le if, et ce qui ne l'est pas. "Ce qui est dans le if" est appelé **un bloc d'instructions**.
+
+En python, il est décalé (on dit **indenté**) et il y a deux points avant...
+
+Eventuellement, il pourrait être intéressant d'avoir 3 cas :
+- *a* < *b*
+- *a* > *b*
+- *a* = *b*
+
+La solution consisterait à imbriquer des *if* ou a utiliser *elif* (cherchez sur le net, on le verra en cours mais je ne vais pas surcharger ce support)
+
+### Les boucles *Tant que* (while)
+Imaginons que je veuille écrire "bonjour à tous" 10 fois. Nous pouvons le faire en répétant 10 fois la ligne suivante :
+```python
+print ("bonjour à tous")
+```
+Mais c'est laid et peu efficace (si je veux changer le message en "au revoir à tous", il faudra que je fasse 10 modifications)
+
+L'idée est de répéter une série d'instructions plusieurs fois. On parle d'une boucle (ici, une boucle Tant que ou **while**)
+
+#### une premiere boucle infinie
+Voici ce que l'on pourrait faire :
+```python
+a = 0
+while (a == 0)
+  print ("bonjour à tous")
+  print ("Appuyez sur Ctrl C pour quitter")
+```
+
+Le déroulement est le suivant :
+1. on initialise *a* à 0
+2. on arrive sur la ligne du *while*. On teste si *a* est égal à 0. Si oui, on execute le code du bloc en dessous. Dans notre cas, *a* vaut bien 0.
+3. on affiche "bonjour a tous"
+4. on affiche "Appuyez"
+5. le bloc d'instruction est terminé. On remonte à la ligne du while (comme en 2.) et on recommence (on boucle)
+
+Dit autrement, on effectue des tous de boucle. Avant chaque nouveau tour, on vérifie si la condition est vraie (**True**) ou fausse (**False**)
+
+Dans le cas de notre programme, vu que *a* ne change pas de valeur dans la boucle, nous allons boucler indéfiniment. Pour quitter une boucle infinie, suivez les instructions affichées par notre programme (Ctrl + c)
+
+#### Une boucle qui compte les tours.
+En modifiant un peu notre programme, on va se servir de *a* pour compter le nombre de tours que l'on fait...
+
+```python
+a = 0
+while (a < 3):
+  print ("bonjour à tous")
+  print ("j'ai fait", a, "tours")
+  a = a+1
+
+print ("fin de la boucle")
+```
+Ici, à chaque tour de boucle, *a*, qui avait commencé à 0, est augmenté de 1. au bout de 3 tours, la condition *a<3* ne sera plus respectée et nous sortirons de la boucle pour afficher "fin de la boucle"
+
+Nous verrons plus tard (ou vous chercherez) un autre célèbre type de boucle, la boucle **for** qui marche bien aussi, mais je n'en n'ai pas besoin pour le moment.
 
 ### Les fonctions.
 Le code que j'ai présenté juste avant est le programme principal. C'est ce que fait mon programme.
 
 Un vrai bon programme découpe le code en petites actions que le programme principal organise. Si je veux programmer
+
+TODO
+
+### Les fichiers de ce Cours
+Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](../Sources/).
+On y trouvera en particulier :
+- [Les variables, tests, boucles](../Sources/01_intro.py)
 
 ___
 Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
@@ -157,7 +283,7 @@ print (noms)
 noms.append("julan")
 print (noms)
 
-noms.append("najeus")
+noms.append("naejus")
 print (noms)
 ```
 #### longueur d'un tableau
@@ -303,14 +429,14 @@ print ("maxi :", maxi)
 Bon. Imaginons que je veuille maintenant gérer aussi les noms de mes étudiants.
 Je pourrais stocker le nom des étudiants dans un tableau de chaînes de caractères.
 ```python
-noms = ["moutoussamy","destouches","julan","najeus"]
+noms = ["moutoussamy","destouches","julan","naejus"]
 ```
 L'idée est que l'étudiant dont le nom est dans la case numéro 2 du tableau *nom* a eu la note contenue dans la case numéro 2 du tableau *notes*
 
 Si je souhaite afficher les noms et les notes de ma promotion : je vais me déplacer de case en case en utilisant un indice variant de 0 à 3. Pour chaque indice, j'affiche la case correspondante dans le tableau des noms et la case correspondante dans le tableau de notes.
 
 ```python
-noms = ["moutoussamy","destouches","julan","najeus"]
+noms = ["moutoussamy","destouches","julan","naejus"]
 for i in range(len(notes)):
     print(noms[i], notes[i])
 ```
@@ -380,7 +506,7 @@ def imaximum(tab):
     return imaxi
 
 notes = [12, 9.5, 14, 2]
-noms = ["moutoussamy","destouches","julan","najeus"]
+noms = ["moutoussamy","destouches","julan","naejus"]
 
 afficher(noms)
 afficher(notes)
@@ -407,6 +533,239 @@ On y trouvera en particulier :
 - [Les parcours de tableaux](../Sources/02_parcoursTableaux.py)
 - [Les exemples de calcul](../Sources/02_calculsTableaux.py)
 - [La version finale](../Sources/02_finalTableaux.py)
+
+
+___
+Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
+___
+### Cours 3 : Réalisation d'un vrai projet
+
+#### Projet : Présentation et Méthodologie
+
+#### Présentation du projet
+Ici, on s'intéresse au **Jeu des Allumettes**.
+- C'est un jeu à deux joueurs qui jouent chacun son tour.
+- au départ les allumettes sont disposées comme suit :
+
+|numéro de ligne | allumettes |
+|---|---|
+|0|I|
+|1|III|
+|2|IIIII|
+|3|IIIIIII|
+
+- A chaque tour, un joueur choisit une ligne et un nombre d'allumettes à retirer sur cette ligne (entre 1 et 3)
+- le joueur qui retire la dernière allumette a perdu.
+
+Il s'agit pour nous de faire un programme qui permette à deux joueurs humains de jouer sur l'ordinateur.
+
+##### Méthodologie de développement du projet
+
+Dans un tel projet, peut être trop complexe pour vous, il va néanmoins falloir commencer pour avancer. Le plus simple est de définir les grandes lignes du projet (notre stratégie).
+
+Ensuite, nous transformerons ces grandes lignes en un programme principal et coderons toutes les fonctions utiles.
+
+#### Grandes lignes
+Ici, on se contente de décrire ce qui se passe dans une partie...
+Nous traduirons ces grandes lignes en un programme principal plus tard.
+
+```Markdown
+1. Joueur départ : joueur 1
+2. initialiser plateau
+
+3. tant qu'il reste au moins une allumette
+  - demander ligne et combien d'allumettes
+  - retirer allumettes
+  - afficher plateau
+  - changer Joueur
+
+4. afficherVainqueur
+```
+
+#### Transformation en programme principal.
+Pour transformer proprement ces grandes lignes en un programme, je dois savoir quelles variables sont passées à toutes mes petites parties de programme.
+
+La variable la plus importante est sans aucun doute l'état du plateau qui stocke quelles allumettes sont sur quelle ligne.
+Une rapide reflexion montre que la seule information importante est le nombre d'allumettes présent sur chaque ligne. Je peux donc coder ceci avec un tableau de 4 entiers.
+Mon initialisation du plateau peut donc s'écrire comme suit :
+
+```python
+plateau = [1,3,5,7]
+```
+Ensuite, je vais pour chaque action de mon plan, supposer l'existence d'une fonction qui fait ce qu'on lui demande et répond ce dont j'ai besoin.
+Le code complet donnerait ceci :
+
+```python
+numJoueur = 1
+plateau = [1,3,5,7]
+
+while ( compteAllumettes(plateau) > 0 ) :
+  numLigne, nbAllu = choisirStrategie(plateau)
+  retirerAllumettes(plateau, numLigne, nbAllu)
+  afficherPlateau(plateau)
+  numJoueur = changerJoueur(numJoueur)
+
+print ("le joueur ", numJoueur, "a gagne")
+```
+Ce code met en évidence des fonctions :
+- *compteAllumettes* qui renvoie le nombre d'allumettes restantes
+- *choisirStrategie* qui renvoie le nombre d'allumettes que l'utilisateur veut retirer et le numéro de ligne sur laquelle les retirer.
+- *retirerAllumettes* qui retire effectivement ces allumettes.
+- *afficherPlateau* qui affiche l'état du plateau actuel.
+- *changerJoueur* qui fait la bascule entre joueur 1 et joueur 2.
+
+Un grand intérêt doit être porté aux variables qui sont passées à chaque fonction et à l'enchainement des appels. Par exemple, *numLigne* est le numéro de ligne sur laquel le joueur veut retirer ses allumettes. Il a été choisi dans la fonction *choisirStrategie* et sera réutilisé par *retirerAllumettes*.
+
+Quand chaque fonction aura été codée, tout le projet fonctionnera.
+
+par exemple, coder (même salement) la fonction qui compte les allumettes peut se faire comme suit :
+```python
+def compteAllumettes(tab) :
+    somme = tab[0]+tab[1]+tab[2]+tab[3]
+
+    return somme
+```
+Ci nous faisons ce travail préalable, nous pouvons maintenant lancer une équipe de développeurs sur chaque fonction séparément, ils travailleront en autonomie.
+
+Dans la pratique, cette approche est trop stricte. Sur cet exemple, je suis capable de définir une stratégie générale sans trop de difficulté, mais pour des projets très complexes, c'est parfois délicat.
+
+**Ce que nous avons fait a surtout une valeur pédagogique** : Comprendre cette notion d'enchainement d'actions et de passage de variables. Oublions donc un peu ce que nous venons de faire pour repartir de l'étape des grandes lignes.
+
+#### Méthodologie de développement réel
+Un développeur un peu chevronné fait souvent le travail d'élaboration des grandes lignes dans sa tête. Si vous n'y arrivez pas, posez le sur un papier (ou dans un fichier).
+
+Il définit ensuite la ou les variables dont il a le plus besoin. Pour nous, c'est clairement *plateau*, que j'ai vu comment définir en python :
+```python
+plateau = [1,3,5,7]
+```
+
+Puis il va élaborer directement une fonction parmi toutes celles à faire et la tester. Puis il s'intéressera a une autre fonction et à son chainage avec la première. Mais dans quel ordre ?
+La règle standard est la suivante :
+- les plus faciles d'abord
+- les plus utiles pour les tests d'abord.
+
+Notez qu'on ne finalisera peut être pas tout de suite ces fonctions, mais on les mettra dans un état permettant à notre projet d'avancer.
+
+Ici, par exemple, la fonction par laquelle je commencerais serait clairement *afficherPlateau*. Celle ci est facilement testable et quand j'aurais fait les autres fonctions (retirer des allumettes, les compter,...), l'affichage pourra me permettre de comparer ce que je vois avec ce que calculent ces fonctions.
+
+A votre niveau, une première version d'affichage pourrait être la suivante, avec son test :
+```python
+def afficherPlateau(tab) :
+    print (tab)
+
+plateau = [1,3,5,7]
+afficherPlateau(plateau)
+```
+Cette version affiche tout le tableau. C'est moche...
+A moindre coût, on peut faire la meme chose comme ceci, ce qui est toujours moche, mais j'ai fait une boucle et chaque tour de boucle (une **itération** de la boucle) sert à traiter une case du tableau, donc une ligne de mon plateau.
+```python
+def afficherPlateau(tab) :
+    for i in range(len(tab)) :
+        print (tab[i], end=" ")
+
+    print("")
+
+plateau = [1,3,5,7]
+afficherPlateau(plateau)
+```
+Je peux améliorer mon affichage en créant une petite fonction responsable de l'affichage d'une ligne. Je lui donne un nombre entier et elle affiche autant de **I** que ce nombre avant de sauter à la ligne. Si je la code, je la teste dans la foulée.
+```python
+def afficherLigne(n) :
+    for i in range(n):
+        print("I", end = "")
+    print("")
+
+afficherLigne(4)
+afficherLigne(2)
+afficherLigne(-1)
+```
+Je peux chainer les deux fonctions : mon programme principal appelle la fonction *afficherPlateau* qui, pour chaque ligne, appelle la fonction *afficherLigne*. Et je teste le tout.
+```python
+def afficherLigne(n) :
+    for i in range(n):
+        print("I", end = "")
+    print("")
+
+def afficherPlateau(tab) :
+    for i in range(len(tab)) :
+        afficherLigne (tab[i])
+
+plateau = [1,3,5,7]
+afficherPlateau(plateau)
+```
+L'étape suivante consisterait :
+1. à être capable de choisir un nombre représentant un numéro de ligne et un nombre d'allumettes...
+2. retirer effectivement ces allumettes.
+3. toutes les autres actions définies dans les grandes lignes
+4. le bouclage sur un nouveau tour
+
+Nous procèderons ainsi de proche en proche avec à chaque étape :
+- un programme qui fonctionne
+- un programme qui a été testé
+- un programme qui s'approche de plus en plus de l'objectif
+
+En cours, nous sommes allés un peu plus loin que ceci. Le résultat obtenu en cours est [ici](../Sources/03_vraiDev.py). Cela inclue la fonction qui demande au joueur quelle ligne / combien d'allumettes il veut retirer et la fonction qui retire effectivement ces allumettes du plateau.
+
+Pour comprendre ces parties, ce n'est pas compliqué, il vous manque simplement une information : pour lire un entier que l'utilisateur entre avec le clavier :
+
+1. On utilise la fonction *input()* qui renvoie ce que l'utilisateur a tapé au clavier sous forme d'une chaine de caractères (*string*)
+2. On transforme cette chaine de charactères en entier avec la fonction *int*
+
+ce qui donne ceci pour afficher le carré d'un entier choisi par l'utilisateur :
+```python
+print ("entrez un entier")
+chaine = input()
+monEntier = int(chaine)
+print (monEntier**2)
+```
+ou en version courte
+```python
+print ("entrez un entier")
+monEntier = int(input())
+print (monEntier**2)
+```
+
+Voila...
+
+### les fichiers
+Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](../Sources/).
+On y trouvera en particulier :
+- [Les grandes lignes](../Sources/03_plan.md)
+- [le programme principal final](../Sources/03_TraductionPlan.py)
+- [le développement pas à pas](../Sources/03_vraiDev.py)
+
+### Exercices à faire
+Vous **devez** être en mesure de faire les choses suivantes :
+- Essayer de ré-écrire les grandes lignes sans regarder le modèle.
+- refaire la traduction en un programme principal en comprenant pourquoi tout s'enchaine comme cela.
+
+Mais vous ne pourrez pas le tester... vu que les fonctions manqueront.
+
+Ensuite, vous **devez** être en mesure de :
+- écrire tout seul la fonction *afficherLigne* et la tester
+- écrire tout seul la fonction *afficherPlateau* et la tester
+- écrire tout seul les fonctions contenues dans [ce fichier](../Sources/03_vraiDev.py) et les tester
+
+Vous **devriez** essayer de faire les choses suivantes :
+- ajouter toutes les fonctions utiles dans une version simple (par exemple, on ne vérifie pas si le numéro de ligne et le nombre d'allumettes choisis par le joueur sont valide)
+- ajouter la boucle sur les tours de jeu.
+- modifier la fonction d'affichage du plateau pour qu'elle affiche le numéro de ligne avant les allumettes, comme suit :
+```
+0: I
+1: III
+2: IIIII
+3: IIIIIII
+```
+- modifier la fonction *choisirStrategie* pour qu'elle affiche un message incluant le numéro du joueur, tel que :
+```
+Joueur 2 :
+Entrez un numéro de Ligne
+```
+il faudra sans doute modifier la fonction *afficherLigne* et peut être lui passer un paramètre supplémentaire.
+
+Vous **pourriez** :
+- Essayer de modifier le programme pour que les joueurs manipulent des numéros de ligne allant de 1 à 4 (et pas de 0 à 3). Notre programme, lui, continuera à stocker le nombre d'allumettes dans un tableau indexé de 0 à 3.
+- Essayer de mettre en place la vérification du numéro de ligne et du nombre d'allumettes choisi par le joueur. Si ses choix sont non valides, on lui redemande...
 
 
 ___
@@ -443,6 +802,7 @@ ___
 - [Introduction](00_intro.md)
 - [Cours 1](01_cours1.md)
 - [Cours 2](02_cours2.md)
+- [Cours 3](03_cours3.md)
 - [Liens utiles](98_liens.md)
 
 ## Etat du cours :

@@ -36,7 +36,7 @@ def imaximum(tab):
 
 
 notes = [12, 9.5, 14, 2]
-noms = ["moutoussamy","destouches","julan","najeus"]
+noms = ["moutoussamy","destouches","julan","naejus"]
 
 print ("=============")
 print ("Les noms")
