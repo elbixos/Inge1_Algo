@@ -3,6 +3,11 @@ Le code que j'ai présenté juste avant est le **programme principal**. C'est ce
 
 Un vrai bon programme découpe le code en petites actions que le programme principal organise. Ces petites actions seront des fonctions.
 
+Programmer en utilisant des fonctions va nous permettre de
+- simplifier notre programme principal
+- limiter les risques d'erreur
+- simplifier l'évolution de mon programme.
+
 #### Création d'une fonction
 Commençons par un exemple simple : un programme qui affiche 3 fois "bonjour" et le nombre de tours faits.
 ```python
@@ -61,6 +66,8 @@ Le gros intérêt des fonctions est la possibilité de les paramétrer.
 
 Si mon programme doit afficher un certain nombre de fois "bonjour a tous", il faudrait que le **programme principal** puisse dire à la fonction quelle valeur on veut donner à sa variable *n*
 
+Le problème est que les fonctions travaillent avec des variables que elles seules connaissent (on parle de **variables locales**). Donc le programme principal ne connait pas la variable *n* de la fonction. Il faut donc établir une communication entre le programme principal et la fonction.
+
 On dit qu'on **passe un argument à la fonction**. Ceci se fait comme suit :
 ```python
 def afficheNFoisBonjour(n):
@@ -72,9 +79,9 @@ def afficheNFoisBonjour(n):
 
 afficheNFoisBonjour(5)
 ```
-Mon programme principal dit 5 à la fonction. La fonction récupère ce 5 dans sa variable *n* (entre les parenthèses) et peut faire ce qu'on lui demande
+Mon programme principal dit *5* à la fonction. La fonction récupère ce *5* et le met dans sa variable *n* (entre les parenthèses) et peut faire ce qu'on lui demande.
 
-Notez que ma fonction s'appelle maintenant *afficheNFoisBonjour* vu qu'elle est paramétrable. Changez la valeur (ici *5* passée a la fonction ) et observez que ma fonction sait maintenant faire beaucoup plus de choses qu'avant.
+Notez que ma fonction s'appelle maintenant *afficheNFoisBonjour* vu qu'elle est paramétrable. Changez la valeur (ici *5*) passée a la fonction et ré-executez le code. Observez que ma fonction sait maintenant faire beaucoup plus de choses qu'avant.
 
 #### Passage de plusieurs paramètres à une fonction
 Je vais encore modifier ma fonction pour qu'elle affiche plusieurs fois un message variable quelconque.
@@ -101,12 +108,39 @@ Ainsi, dans le programme qui précède :
 Au final, mon programme affiche donc 5 fois "bonjour" puis 3 fois "au revoir"
 
 #### Valeur de retour d'une fonction
+Les fonctions que nous avons vues font des choses a partir des informations que leur donne le programme principal.
 
+Comment faire si maintenant ces fonctions doivent communiquer des informations au programme principal ?
 
+Par exemple, si je dois faire une fonction qui fait la somme de deux nombres :
 
+```python
+def somme(a,b):
+    resu = a +b
 
+somme (3,5)
+```
+ma fonction calcule bien la somme de *a* et *b* et met le résultat dans resu. Le programme principal fournit les valeurs de *a* et de *b* lors de l'appel, mais il ne peut pas utiliser le résultat calculé car **resu** est locale à la fonction.
 
-TODO
+Il faut que la fonction *réponde* au programme. On dit qu'elle **retourne une valeur** au programme.
+Cela se fait avec le mot clef **return**.
+
+```python
+def somme(a,b):
+    resu = a +b
+    return resu
+
+resultat = somme (3,5)
+print(resultat)
+```
+Dans ce qui précède la fonction calcule *resu* le renvoie au programme principal.
+Le programme principal récupère ce résultat et le place dans la variable *resultat*. On peut ensuite l'afficher.
+
+Tout se passe comme si l'appel de la fonction était remplacé par la valeur que la fonction renvoie.
 
 #### Exercices
-TODO
+Vous devez être capables de faire ce qui suit :
+
+- faire une fonction qui calcule le produit des nombres entiers de 1 à *n* et l'appeler pour que le programme principal affiche la somme. *n* sera fixé par l'utilisateur du programme.
+
+- reprendre **tous** les exercices des sections précédentes pour les transformer en fonctions que le programme principal utilise.
