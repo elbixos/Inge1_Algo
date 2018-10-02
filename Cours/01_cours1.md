@@ -26,14 +26,18 @@ Je vais supposer que nous disposons d'images des visage chaque étudiant de la p
 La partie **Stratégie** c'est la définition des grandes étapes de mon programme. Pour l'exemple, on pourrait penser à quelque chose comme ceci :
 lorsqu'on me donne un fichier image à reconnaitre, je vais :
 
-```Markdown
+
 1. lire l'image du fichier -> une image *inconnue*
+
 2. lire l'ensemble de mes images connues -> *maBase*
+
 3. pour chaque image de *maBase*
+
     3.1 Je mesure la distance de mon image *inconnue* a l'image connue -> dist
+
     3.2 Je retiens l'image connue ayant la plus distance *dist* -> *imageLaPlusProche*
+
 4. J'annonce avoir reconnu l'étudiant dont le nom corresspond à *imageLaPlusProche*
-```
 
 Vous ne savez pas lire une image ? Ce n'est pas très grave (internet ou votre sergent le sait)
 
