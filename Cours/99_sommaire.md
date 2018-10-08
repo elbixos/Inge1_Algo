@@ -3,6 +3,7 @@
 - [Cours 1](01_cours1.md)
 - [Cours 2](02_cours2.md)
 - [Cours 3](03_cours3.md)
+- [Cours 4](04_cours4.md)
 - [Liens utiles](98_liens.md)
 
 ## Etat du cours :
