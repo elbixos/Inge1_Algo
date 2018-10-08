@@ -13,7 +13,9 @@ un tableau 1D, c'est ca :
 
 #### Tableaux 2D
 
-Il peut être intéressant d'avoir sous la main un **tableau 2D** tel que :
+Il peut être intéressant d'avoir sous la main un **tableau 2D** tel que
+celui décrit ci dessous.
+J'appellerais ce tableau *structure1*
 
 | | col 0 |col 1|col 2|col 3|col 4|col 5|
 |:---:|
@@ -27,11 +29,10 @@ celui ci
 
 
 ```python
-tab[0][1] = 5;
+structure1[0][1] = 5;
 ```
 qui mettrait la valeur 5 dans la case située ligne 0, colonne 1
 
-#### Implémentation en python.
 
 Toute l'astuce en algorithmique est de recycler ce qu'on a déjà fait.
 
@@ -58,8 +59,7 @@ par exemple, *ligne0* serait le tableau suivant.
 </tr>
 </table>
 
-Le tout nous donne cette structure :
-
+Le tout nous donne cette structure pour mon tableau 2D : c'est ma *structure2*
 <table>
 <tr> <td>
   <table><tr><td> case [0,0]</td><td> case [0,1]</td><td> case [0,2]</td><td> ...</td><td> case [0,5]</td></tr></table>
@@ -72,7 +72,10 @@ Le tout nous donne cette structure :
 </td></tr>
 </table>
 
+Elle est équivalente dans son utilisation au modèle de la *structure1*.
 Relisez ca calmement si cela vous pose problème.
+
+#### Implémentation en python.
 
 Maintenant, implémentons ça en python.
 Nous allons créer un tableau contenant les noms et les notes de la promo.
