@@ -216,6 +216,8 @@ Vous **devez** être en mesure de faire les exercices suivants :
 5. faites un programme qui calcule le produit des nombres de 1 à 33
 
 4. faites un programme qui calcule le produit du carré des nombres de 1 à 33
+
+
 ### Les fonctions.
 Le code que j'ai présenté juste avant est le **programme principal**. C'est ce que fait mon programme.
 
@@ -930,6 +932,30 @@ il faudra sans doute modifier la fonction *afficherLigne* et peut être lui pass
 Vous **pourriez** :
 - Essayer de modifier le programme pour que les joueurs manipulent des numéros de ligne allant de 1 à 4 (et pas de 0 à 3). Notre programme, lui, continuera à stocker le nombre d'allumettes dans un tableau indexé de 0 à 3.
 - Essayer de mettre en place la vérification du numéro de ligne et du nombre d'allumettes choisi par le joueur. Si ses choix sont non valides, on lui redemande...
+### Cours 4 : Structures de données élaborées
+
+Il s'agit ici de disposer de structures un peu plus compliquées que
+des variables isolées (vues au [cours 1](01_cours1.md))
+ou des tableaux 1D (vus au [cours2](02_cours2.md)
+
+un tableau 1D, c'est ca :
+
+|indices|0|1|2|...|n|
+|:---:|
+|cases|case 0|case 1|case 2|...|case n|
+
+Il peut être intéressant d'avoir sous la main un **tableau 2D** tel que :
+
+| |col 0 |col 1|col 2|col 3|col 4|col 5|
+|---|
+|ligne 0|case [0,0]|case [0,1]|...|...|...|case[0,5]|
+|ligne 1|case [1,0]|...|...|...|...|...|
+|ligne 2|case [2,0]|...|...|...|...|case[2,5]|
+
+### les fichiers
+Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](../Sources/).
+
+### Exercices à faire
 ## Quelques liens externes
 
 Le problème quand on enseigne l'informatique (ou quoi que ce soit d'autre), est d'adapter son discours a son public. Ce que je propose dans ce cours est un kit de survie pour l'algorithmique et la programmation utile pour tout ingénieur.

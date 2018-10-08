@@ -197,6 +197,8 @@ Vous **devez** être en mesure de faire les exercices suivants :
 5. faites un programme qui calcule le produit des nombres de 1 à 33
 
 4. faites un programme qui calcule le produit du carré des nombres de 1 à 33
+
+
 ### Les fonctions.
 Le code que j'ai présenté juste avant est le **programme principal**. C'est ce que fait mon programme.
 
@@ -343,12 +345,15 @@ Vous devez être capables de faire ce qui suit :
 - faire une fonction qui calcule le produit des nombres entiers de 1 à *n* et l'appeler pour que le programme principal affiche la somme. *n* sera fixé par l'utilisateur du programme.
 
 - reprendre **tous** les exercices des sections précédentes pour les transformer en fonctions que le programme principal utilise.
+
+
 ### les fichiers
 Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](../Sources/index.md).
 On y trouvera en particulier :
 - [variables / tests / while](../Sources/01_intro.py)
 
 - les exemples sur les fonctions dans les fichiers dont le nom commence par **01_0** dans le repertoire [Sources](../Sources/index.md)
+
 ___
 Vous pouvez repartir vers le [Sommaire](99_sommaire.md)
 ___
