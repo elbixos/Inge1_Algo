@@ -1,6 +1,6 @@
 # Correction CC1 2018 2019
 
-L'énoncé est [ici](inge1_algocc1_1018.md).
+L'énoncé est [ici](inge1_algo_cc1_1018.md).
 
 ## Partie 1 Tactique :
 
