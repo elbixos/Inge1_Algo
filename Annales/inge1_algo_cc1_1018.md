@@ -24,7 +24,7 @@ pour la matière de la colonne j.
 4. (3pts) donner le code de la fonction qui calcule la moyenne générale de toute
 la promotion.
 
-5. (3 pts) faire le programme principale qui demande à l'utilisateur un numéro de ligne,
+5. (3 pts) faire le programme principal qui demande à l'utilisateur un numéro de ligne,
 puis affiche "bravo" si sa moyenne est supérieure à la moyenne de la classe
 
 ## Strategie (8 pts)
@@ -34,7 +34,7 @@ Nous voudrions un programme qui lise un fichier contenant les notes de toute la 
 
 Dans ce fichier texte, sur chaque ligne, on trouve les données sous la forme :
 ```
-nom de l'"tudiant, note1, note2, note 3, ... note 9
+nom de l'étudiant, note1, note2, note 3, ... note 9
 ```
 
 Votre programme devra :
