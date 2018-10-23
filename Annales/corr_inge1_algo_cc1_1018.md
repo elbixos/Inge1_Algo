@@ -71,3 +71,38 @@ mGen = moyenneGen(tab)
 if mEtu > mGen :
   print("Bravo")
 ```
+
+## Partie 2 Stratégie :
+Le fichier contenant les notes de la promotion sera appelé *notes.csv*.
+
+Le fichier de sortie contenant les noms et les moyennes triées sera appelé *moyennesTriees.csv*.
+
+Nous allons stocker les informations du fichier dans un gros tableau appelé *tab*, organisé comme suit (la première ligne ne fait pas vraiment partie du tableau) :
+
+| nom étudiant | note 1| note 2|... |note n |
+|-|-|-|--|---|
+|Joe|12| 9|...|5|
+|Bill|...| ...| ...|..|
+|Bob |13| 12 | ...| 11|
+
+Les moyennes des étudiants seront stockées dans un tableau appélé *tabMoy* organisé comme suit :
+
+| nom étudiant | moyenne |
+|-|-|
+|Joe|12.27|
+|Bill|...|
+|Bob |13.45|
+
+Le programme principal sera le suivant :
+```python
+nomFichierIn = "notes.csv"
+nomFichierOut = "moyennesTriees.csv"
+
+tab = lireCsv(nomFichier)
+
+tabMoy = calculMoyennes (tab)
+
+tabMoy = triCroissant(tabMoy)
+
+ecrireCsv(nomFichierOut,tabMoy)
+```
