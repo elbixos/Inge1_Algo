@@ -17,7 +17,7 @@ Chaque ligne contient les notes d'un étudiant pout toutes les matières
 
 2. (2 pts) donner le code de la fonction qui calcule la moyenne de l'étudiant
 de la ieme ligne
-
+1
 3. (2 pts) donner le code de la fonction qui calcule la moyenne de tous les étudiants
 pour la matière de la colonne j.
 
