@@ -152,3 +152,7 @@ pour afficher toutes les infos de toute la promo :
 for e in promo :
     afficherEtu(e)
 ```
+
+##### Les fichiers sources
+
+Les sources de tout ce que nous avons fait dans ce cours sont dans le répertoire [Sources](../Sources/index.md).
