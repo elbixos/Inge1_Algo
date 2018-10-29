@@ -1259,6 +1259,33 @@ X_X_X
 _X_X_
 X_X_X
 ```
+### Cours 5 : rappels stratégie et CC1
+
+#### stratégie
+
+Suite à vos demandes, le début de ce cours a été consacré à la
+réalisation d'un exemple de programme.
+Il s'agissait de réaliser un programme permettant de gérer le déplacement
+d'un drone.
+
+
+... TO BE CONTINUED
+#### CC1
+
+La suite du cours a été consacrée au premier Contrôle continu.
+Le sujet est disponible dans les [annales](../Annales/)
+### Structures de données plus complexes
+
+Au dela des variables primitives et des tableaux, on peut avoir besoin de choses plus spécifiques.
+Nous traiterons ici des **tableaux associatifs** et des **classes**
+
+#### Tableaux associatifs
+### Structures de données plus complexes
+
+Au dela des variables primitives et des tableaux, on peut avoir besoin de choses plus spécifiques.
+Nous traiterons ici des **tableaux associatifs** et des **classes**
+
+#### Tableaux associatifs
 ## Quelques liens externes
 
 Le problème quand on enseigne l'informatique (ou quoi que ce soit d'autre), est d'adapter son discours a son public. Ce que je propose dans ce cours est un kit de survie pour l'algorithmique et la programmation utile pour tout ingénieur.
