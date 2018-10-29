@@ -11,7 +11,7 @@ source generateChapter.sh 2
 source generateChapter.sh 3
 source generateChapter.sh 4
 source generateChapter.sh 5
-source generateChapter.sh 5
+source generateChapter.sh 6
 
 ## generation du fichier complet.
 LISTE=$(ls 000_title.md 00_intro.md 0*_0*.md 98_liens.md)
