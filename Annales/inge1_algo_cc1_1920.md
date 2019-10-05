@@ -15,6 +15,7 @@ Chaque ligne contient les notes d'un étudiant pout toutes les matières
 (colonnes).
 
 Les coefficients de chaque matière sont indiqués dans un second tableau :
+
 | coeff 1| coeff 2|... | coeff n |
 |-|-|--|---|
 |2| 3 |...|1|
