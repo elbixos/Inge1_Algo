@@ -63,7 +63,7 @@ Votre programme devra :
 ```
 numéro d'experience, Résultat théorique, Résultat mesuré, différence théorique / mesuré
 ```
-dans ce fichier de sortie, les étudiants sont triés par ordre de différence croissante.
+dans ce fichier de sortie, les expériences sont triés par ordre de différence croissante.
 
 
 
