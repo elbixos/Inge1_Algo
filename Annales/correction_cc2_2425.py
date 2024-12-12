@@ -15,7 +15,7 @@ def lire(filename):
     # on va lire le fichier ligne par ligne, transformer les donnees d'une
     # ligne en tableau et ajouter ce tableau à données.
 
-    fp = open(filename) # ici, fp "pointe" sur le contenu du fichier
+    fp = open(filename,"r") # ici, fp "pointe" sur le contenu du fichier
     for ligne in fp: # python va parcourir le fichier ligne par ligne
         # ligne contient donc une ligne du fichier à chaque itération
 
@@ -52,6 +52,7 @@ def ecrire(filename,donnees):
 
         # on ecrit la ligne dans le fichier
         fp.write(ligne)
+        fp.write(",")
 
         # on ajoute un retour chariot en fin de ligne
         fp.write("\n")
