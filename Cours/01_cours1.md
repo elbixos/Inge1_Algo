@@ -139,6 +139,12 @@ Vous **devez** être en mesure de faire les exercices suivants :
       - 0 < a < 2
 
       - 2 <= a
+
+### Les feintes de sioux
+
+Je vous ajoute quelques trucs à savoir qui seront bien pratiques
+par la suite, dans le fichier [sioux_01.md](sioux_01.md)
+
 ### Les boucles *Tant que* (while)
 Imaginons que je veuille écrire "bonjour à tous" 10 fois. Nous pouvons le faire en répétant 10 fois la ligne suivante :
 ```python
