@@ -8,5 +8,5 @@ Faire un programme qui calcule une moyenne de notes.
 Le programme demande à l'utilisateur le nombre de notes
 à entrer.
 Il demande ensuite chacune des notes.
-Il affiche la somme.
+Il affiche la moyenne.
 
