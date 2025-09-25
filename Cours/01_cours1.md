@@ -345,6 +345,10 @@ Le programme principal récupère ce résultat et le place dans la variable *res
 
 Tout se passe comme si l'appel de la fonction était remplacé par la valeur que la fonction renvoie.
 
+#### Si vous avez du mal
+Allez voir ceci : [fonctions_pour_les_nuls.md](fonctions_pour_les_nuls.md)
+
+
 #### Exercices
 Vous devez être capables de faire ce qui suit :
 
