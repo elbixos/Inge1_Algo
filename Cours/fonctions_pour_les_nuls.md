@@ -5,7 +5,6 @@ geometry: margin=2cm
 lancer : pandoc --highlight-style zenburn
 ---
 
-
 ## Appel de fonctions.
 
 Si mon programme doit utiliser (appeler) une fonction :
