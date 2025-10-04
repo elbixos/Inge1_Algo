@@ -74,3 +74,72 @@ print("le nombre de valeurs correspondant est :",compteur)
 
     le nombre de valeurs correspondant est : 2
     
+
+## Exercice 4 : un tableau et une fonction
+
+Meme exercice que précédement, mais avec une fonction qui compte les élements
+
+Dans la correction, j'utilise un parcours du tableau par indices.
+
+
+```python
+def compte_trucs(tableau):
+    compteur = 0
+
+    # Ici, un parcours par indices
+    for i in range(len(tableau)) :
+        if (tableau[i]*tableau[i] < 5):
+            compteur = compteur + 1
+    
+    return compteur
+
+
+tab = [3,-1,5,7,-6, 2]
+
+n = compte_trucs(tab)
+print("le nombre de valeurs correspondant est :",n)
+```
+
+## Exercice 5 : ajouts dans un tableau
+
+faire un programme qui :
+
+- demande à l'utilisateur combien il veut saisir de notes,
+- fasse la saisie
+- calcule et affiche la moyenne.
+
+Créez les fonctions de saisie et de moyenne
+
+
+```python
+def saisir(n):
+    tab = []
+    for i in range(n):
+        print("saisissez une note")
+        note = float(input())
+        tab.append(note)
+
+    return tab
+
+def calcul_moyenne(tab):
+    somme = 0
+    for val in tab:
+        somme += val
+
+    moy = somme / len(tab)
+    return moy
+
+print("combien de notes voulez vous saisir ?")
+nb = int(input())
+
+notes = saisir(nb)
+moyenne = calcul_moyenne(notes)
+print("la moyenne est :",moyenne)
+```
+
+    combien de notes voulez vous saisir ?
+    saisissez une note
+    saisissez une note
+    saisissez une note
+    la moyenne est : 11.0
+    
