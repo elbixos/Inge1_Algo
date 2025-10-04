@@ -7,6 +7,7 @@
 - [Cours 5](05_cours5.md)
 - [Cours 6](06_cours6.md)
 - [Liens utiles](98_liens.md)
+- [des exercices](../Exercices/premiers_exemples.ipynb)
 
 ## Etat du cours :
 Pour le moment :
