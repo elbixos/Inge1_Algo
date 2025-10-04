@@ -143,3 +143,35 @@ print("la moyenne est :",moyenne)
     saisissez une note
     la moyenne est : 11.0
     
+
+## Exercice 6 :
+
+Faire un programme qui demande 3 notes (entre 0 et 20) à l'utilisateur.
+Si l'utilisateur entre une note non valide, lui afficher un message d'erreur
+et lui redemander.
+
+Afficher le tableau de notes saisies
+
+
+```python
+tab = []
+
+for i in range(3):
+    print("entrez votre note")
+    note = float(input())
+    while note < 0 or note > 20:
+        print("erreur, recommencez")
+        note = float(input())
+    
+    tab.append(note)
+
+print (tab)
+```
+
+    entrez votre note
+    erreur, recommencez
+    erreur, recommencez
+    entrez votre note
+    entrez votre note
+    [10.0, 10.0, 12.0]
+    
