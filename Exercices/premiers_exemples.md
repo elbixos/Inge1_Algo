@@ -6,6 +6,8 @@ le calcul de l'indice masse corporelle est le suivant :
 
 $$ imc = masse / (taille^2)$$
 
+(la masse doit être en kg, la taille en mètres)
+
 donner le code d'un programme qui demande à l'utilisateur son poids et sa taille
 et affiche son IMC
 
@@ -217,3 +219,50 @@ print (tab)
     entrez votre note
     [10.0, 12.0, 13.0]
     
+
+## Exo 8 : Un peu de tactique
+
+1. décrivez les variables et les fonctions nécessaires pour jouer au jeu des allumettes
+
+2. Donner le code du programme principal qui permette de jouer à ce jeu (voir cours)
+
+Voici la correction de la question 1
+
+### Pour les variables
+
+Il vous faut :
+
+- une variable qui contient l'état du plateau
+(respectivement 1,3,5,7 allumettes sur chaque ligne). Un tableau d'entier fera l'affaire, on appelera cette variable *plateau*
+- une variable qui contient le numéro de ligne choisi par le joueur. on l'appelera *ligne*
+- une variable qui contient le nombre d'allumettes choisi par le joueur. on l'appelera *nb*
+- une variable qui contient le numéro du joueur (1 ou 2). on l'appelera *joueur*
+
+### Pour les fonctions :
+
+Il vous faut :
+
+- une fonction *afficher*, qui affiche le plateau. on lui passe le plateau. Elle ne renvoie rien
+- une fonction *compter_allumettes* qui compte le nombre d'allumettes restant sur le plateau. On lui passe le plateau, elle renvoie le nombre d'allumettes
+- une fonction *saisir*, qui renvoie le numéro de ligne et le nombre d'allumettes. cette fonction, pour le moment, n'aura pas d'arguments
+- une fonction *changer_joueur*, qui permet de changer de joueur. On lui passe le numéro du joueur actuel, et elle renvoie le numéro du joueur suivant
+
+avec ca, on peut faire le programme suivant
+
+
+```python
+plateau = [1,3,5,7]
+
+joueur = 1
+
+while compter_allumettes(plateau) > 0:
+    afficher(plateau)
+
+    ligne, nb = saisir()
+    plateau[ligne] -= nb
+
+    joueur = changer_joueur(joueur)
+
+print("le joueur",joueur, "a gagné")
+
+```
