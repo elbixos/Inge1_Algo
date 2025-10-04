@@ -144,7 +144,7 @@ print("la moyenne est :",moyenne)
     la moyenne est : 11.0
     
 
-## Exercice 6 :
+## Exercice 6 : verifications de saisie
 
 Faire un programme qui demande 3 notes (entre 0 et 20) à l'utilisateur.
 Si l'utilisateur entre une note non valide, lui afficher un message d'erreur
@@ -174,4 +174,46 @@ print (tab)
     entrez votre note
     entrez votre note
     [10.0, 10.0, 12.0]
+    
+
+## Exercice 7 : idem mais avec fonctions
+
+faire la même chose, mais en créant et utilisant deux fonctions :
+
+- une fonction qui vérifie si une note est valide (renvoie True ou False)
+- une fonction qui fait la saisie d'une note, en s'assurant qu'elle est valide
+
+
+```python
+def is_valid(note):
+    if note >= 0 and note <= 20:
+        return True
+    else :
+        return False
+    
+def saisir_note():
+    note = float(input())
+    while is_valid(note) == False :
+        print("erreur, recommencez")
+        note = float(input())
+    
+    return note
+
+tab = []
+
+for i in range(3):
+    print("entrez votre note")
+    note = saisir_note()
+    
+    tab.append(note)
+
+print (tab)
+```
+
+    entrez votre note
+    entrez votre note
+    erreur, recommencez
+    erreur, recommencez
+    entrez votre note
+    [10.0, 12.0, 13.0]
     
