@@ -7,7 +7,6 @@ Vous y trouverez notamment :
 - [Les exemples du cours](Sources/index.md)
 - [Les annales d'examens et corrections](Annales/index.md)
 - des outils que j'utilise pour générer tout cela
-- des [exercices](Exercices\premiers_exemples.md) et leur [correction](Exercices\premiers_exemples.ipynb)
-
+- des [exercices](Exercices/premiers_exemples.md) 
 
 Logiquement, en suivant le plan du cours, vous devriez vous en sortir.
