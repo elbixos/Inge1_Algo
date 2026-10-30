@@ -15,11 +15,12 @@
 - 2022-2023 :
   - cc 1 : [enoncé](inge1_algo_cc1_2223.pdf)
   - cc 2 : [enoncé](inge1_algo_cc2_2223.pdf)
-
+  - cc 3 : [enoncé](inge1_algo_cc3_2223.pdf)
 
 - 2024-2025 :
   - cc 1 : [enoncé](inge1_algo_cc1_2425.pdf)
   - cc 2 : [enoncé](inge1_algo_cc2_2425.pdf)
+  - cc 3 : [enoncé](inge1_algo_cc3_2425.pdf)
 
 - 2025-2026 :
   - cc 1 : [enoncé](inge1_algo_cc1_2526.pdf)
